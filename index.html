@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <ht> Calculadora IMC </ht>
+    </div>
+    <div>
+
+        <Label>Peso: </Label>
+        <input id = "inputPeso"/>
+        <label>Altura: </label>
+        <input id = "inputAltura" />
+        <button class = "btn" id = "btncalculo" onclick= calcularIMC()>Calcular</button>
+
+    </div>
+    <div>
+        <div class="divResultado">
+        <label> Resultado</label>
+        <label id = "lblResultado"></label>
+    </div>
+    
+</body>
+
+<script>
+    function calcularIMC(){
+    console.log("Carregou a página");
+    let Peso = document.getElementById("inputPeso").value;
+    let Altura = document.getElementById("inputAltura").value;
+    let Resultado = Peso /(Altura* Altura);
+
+    if(peso=="" || Altura==""){
+            document.getElementById("lblResultado").innerHTML = "Preencha todos os campos"
+            document.getElementById("lblResultado").classList.add("textoErro");
+        }
+        else{
+            document.getElementById("lblResultado").innerText =  + resultado;
+            document.getElementById("lblResultado").classList.remove("textoErro");
+        }
+
+   
+        }
+    
+</script>
+
+</html>
